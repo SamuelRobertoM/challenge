@@ -19,9 +19,9 @@ class ProductoServicioController extends Controller
     public function index()
     {
         $productos_servicios = ProductoServicio::all();
-        $rubros = Rubro::all();
-        $condiciones_iva = CondicionIva::all();
-        $unidades_medida = UnidadMedida::all();
+        $rubros = Rubro::select('id', 'rubro')->get();
+        $condiciones_iva = CondicionIva::select('id', 'condicion_iva')->get();
+        $unidades_medida = UnidadMedida::select('id', 'unidad_medida')->get();
         return view('productoservicio.index', compact('productos_servicios', 'rubros', 'condiciones_iva', 'unidades_medida'));
         
     }
@@ -74,9 +74,9 @@ class ProductoServicioController extends Controller
     public function show(string $id)
     {
         $producto_servicio = ProductoServicio::with(['rubro', 'condicion_iva', 'unidad_medida'])->find($id);
-        $rubros = Rubro::all();
-        $condiciones_iva = CondicionIva::all();
-        $unidades_medida = UnidadMedida::all();
+        $rubros = Rubro::select('id', 'rubro')->get();
+        $condiciones_iva = CondicionIva::select('id', 'condicion_iva')->get();
+        $unidades_medida = UnidadMedida::select('id', 'unidad_medida')->get();
         return view('productoservicio.show', compact('producto_servicio', 'rubros', 'condiciones_iva', 'unidades_medida'));
     }
 
@@ -85,19 +85,19 @@ class ProductoServicioController extends Controller
      */
     public function edit(string $id)
     {
-        try {
-            $producto_servicio = ProductoServicio::findOrFail($id);
-            $rubros = Rubro::all();
-            $condiciones_iva = CondicionIva::all();
-            $unidades_medida = UnidadMedida::all();
-            return view('productoservicio.edit', compact('producto_servicio', 'rubros', 'condiciones_iva', 'unidades_medida'));
-        } catch (ModelNotFoundException $e) {
-            Log::error("Producto/servicio no encontrado para editar: " . $e->getMessage());
-            return redirect()->route('productos-servicios.index')->with('error', 'Producto/servicio no encontrado.');
-        } catch (\Exception $e) {
-            Log::error("Error al mostrar el formulario de edición: " . $e->getMessage());
-            return redirect()->route('productos-servicios.index')->with('error', 'Error al cargar el formulario de edición.');
-        }
+        // try {
+        //     $producto_servicio = ProductoServicio::findOrFail($id);
+        //     $rubros = Rubro::all();
+        //     $condiciones_iva = CondicionIva::all();
+        //     $unidades_medida = UnidadMedida::all();
+        //     return view('productoservicio.edit', compact('producto_servicio', 'rubros', 'condiciones_iva', 'unidades_medida'));
+        // } catch (ModelNotFoundException $e) {
+        //     Log::error("Producto/servicio no encontrado para editar: " . $e->getMessage());
+        //     return redirect()->route('productos-servicios.index')->with('error', 'Producto/servicio no encontrado.');
+        // } catch (\Exception $e) {
+        //     Log::error("Error al mostrar el formulario de edición: " . $e->getMessage());
+        //     return redirect()->route('productos-servicios.index')->with('error', 'Error al cargar el formulario de edición.');
+        // }
     }
 
     /**
