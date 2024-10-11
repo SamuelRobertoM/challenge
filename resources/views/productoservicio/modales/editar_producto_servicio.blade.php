@@ -39,7 +39,7 @@
                       <option value="" disabled>Selecciona un rubro</option> <!-- Opción por defecto -->
                       @foreach($rubros as $rubro)
                           <option value="{{ $rubro->id }}" {{ $producto_servicio->id_rubro == $rubro->id ? 'selected' : '' }}>
-                              {{ $rubro->rubro }}
+                              {{ $rubro->nombre }}
                           </option>
                       @endforeach
                   </select>
@@ -50,7 +50,7 @@
                     <option value="" disabled>Selecciona una condición de IVA</option>
                     @foreach($condiciones_iva as $condicion)
                         <option value="{{ $condicion->id }}" {{ $producto_servicio->id_condicion_iva == $condicion->id ? 'selected' : '' }}>
-                            {{ $condicion->condicion_iva }}
+                            {{ $condicion->nombre }}
                         </option>
                     @endforeach
                 </select>
@@ -60,9 +60,9 @@
                 <label for="unidad_medida">Unidad de Medida</label>
                 <select name="id_unidad_medida" id="unidad_medida" class="form-control" required>
                     <option value="" disabled>Selecciona una unidad de medida</option>
-                    @foreach($unidades_medida as $unidad)
-                        <option value="{{ $unidad->id }}" {{ $producto_servicio->id_unidad_medida == $unidad->id ? 'selected' : '' }}>
-                            {{ $unidad->unidad_medida }}
+                    @foreach($unidades_medida as $unidad_medida)
+                        <option value="{{ $unidad_medida->id }}" {{ $producto_servicio->id_unidad_medida == $unidad_medida->id ? 'selected' : '' }}>
+                            {{ $unidad_medida->nombre }}
                         </option>
                     @endforeach
                 </select>

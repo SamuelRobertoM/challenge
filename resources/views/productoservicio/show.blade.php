@@ -40,9 +40,9 @@
                                     <td>{{ $producto_servicio->precio_bruto_unitario }}</td>
                                     <td>{{ $producto_servicio->codigo }}</td>
                                     <td>{{ $producto_servicio->tipo }}</td>
-                                    <td>{{ $producto_servicio->rubro->rubro }}</td>
-                                    <td>{{ $producto_servicio->condicion_iva->condicion_iva }}</td>
-                                    <td>{{ $producto_servicio->unidad_medida->unidad_medida }}</td>
+                                    <td>{{ $producto_servicio->rubro->nombre }}</td>
+                                    <td>{{ $producto_servicio->condicion_iva->nombre }}</td>
+                                    <td>{{ $producto_servicio->unidad_medida->nombre }}</td>
                                     <td>
                                         <a onclick="$('#modalEditarProductoServicio').modal('show')" class="btn btn-info btn-sm" title="Editar producto/servicio">
                                             <i class="fas fa-pencil-alt"></i>
