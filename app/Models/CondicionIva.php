@@ -16,5 +16,10 @@ class CondicionIva extends Model
     {
         return $this->hasMany(ProductoServicio::class, 'id_condicion_iva');
     }
+
+    public function getNombreAttribute()
+    {
+        return $this->condicion_iva;
+    }
 }
 

@@ -9,12 +9,17 @@ class Rubro extends Model
 {
     protected $table = 'rubro';
 
-    protected $fillable = ['nombre'];
+    protected $fillable = ['rubro'];
 
     // Relación uno a muchos con ProductoServicio
     public function productosServicios()
     {
         return $this->hasMany(ProductoServicio::class, 'id_rubro');
+    }
+
+    public function getNombreAttribute()
+    {
+        return $this->rubro;
     }
 }
 

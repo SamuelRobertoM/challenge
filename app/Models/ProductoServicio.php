@@ -11,7 +11,16 @@ class ProductoServicio extends Model
 
     protected $table = 'producto_servicio';
      
-    protected $fillable = ['tipo','codigo','descripcion'];
+    protected $fillable = [
+        'nombre',
+        'tipo',
+        'codigo',
+        'descripcion',
+        'precio_bruto_unitario',
+        'id_rubro',
+        'id_unidad_medida',
+        'id_condicion_iva'
+    ];
 
     public function rubro()
     {

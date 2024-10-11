@@ -16,5 +16,10 @@ class UnidadMedida extends Model
     {
         return $this->hasMany(ProductoServicio::class, 'id_unidad_medida');
     }
+
+    public function getNombreAttribute()
+    {
+        return $this->unidad_medida;
+    }
 }
 
