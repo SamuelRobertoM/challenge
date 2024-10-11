@@ -9,6 +9,8 @@ class UnidadMedida extends Model
 {
     protected $table = 'unidad_medida';
 
+    protected $fillable = ['unidad_medida'];
+
     // Relación uno a muchos con ProductoServicio
     public function productosServicios()
     {

@@ -9,6 +9,8 @@ class CondicionIva extends Model
 {
     protected $table = 'condicion_iva';
 
+    protected $fillable = ['condicion_iva'];
+
     // Relación uno a muchos con ProductoServicio
     public function productosServicios()
     {

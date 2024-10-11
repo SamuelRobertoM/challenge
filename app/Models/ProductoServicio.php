@@ -19,13 +19,13 @@ class ProductoServicio extends Model
     }
 
     // Relación muchos a uno con UnidadMedida
-    public function unidadMedida()
+    public function unidad_medida()
     {
-        return $this->belongsTo(unidadMedida::class, 'id_unidad_medida');
+        return $this->belongsTo(UnidadMedida::class, 'id_unidad_medida');
     }
 
     // Relación muchos a uno con CondicionIva
-    public function condicionIva()
+    public function condicion_iva()
     {
         return $this->belongsTo(CondicionIva::class, 'id_condicion_iva');
     }
