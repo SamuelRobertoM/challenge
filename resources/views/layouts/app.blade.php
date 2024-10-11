@@ -7,51 +7,35 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    {{-- <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" /> --}}
-
     <!-- Agregar los archivos CSS de Gentelella -->
-    {{-- <link rel="stylesheet" href="{{ asset('css/gentelella.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('public/css/font-awesome.min.css') }}">
-
-    <!-- Bootstrap CSS (incluido de forma externa) -->
-    <link rel="stylesheet" href="{{ asset('public/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('vendors/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendors/nprogress/nprogress.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/gentelella.css') }}">
+    <!-- Puedes agregar más archivos CSS si son necesarios -->
 </head>
 <body class="nav-md">
-    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-        @include('layouts.navigation')
+    <div class="container body">
+        <div class="main_container">
+            <!-- Sidebar -->
+            @include('partials.sidebar')
 
-        <!-- Page Heading -->
-        @isset($header)
-            <header class="bg-white dark:bg-gray-800 shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-        @endisset
+            <!-- Top navigation -->
+            @include('partials.topnav')
 
-        <div class="container body">
-            <div class="main_container">
-                <!-- Sidebar -->
-                @include('partials.sidebar')
-
-                <!-- Top navigation -->
-                @include('partials.topnav')
-
-                <!-- Contenido principal -->
-                <div class="right_col" role="main">
-                    @yield('content')
-                </div>
+            <!-- Contenido principal -->
+            <div class="right_col" role="main">
+                @yield('content')
             </div>
         </div>
     </div>
 
     <!-- Agregar los archivos JS de Gentelella -->
-    <script src="{{ asset('public/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('public/jsbootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('public/js/fastclick.js') }}"></script>
-    <script src="{{ asset('public/js/nprogress.js') }}"></script>
-    <!-- Puedes agregar más archivos JS si son necesarios -->
+    <script src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendors/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('vendors/fastclick/lib/fastclick.js') }}"></script>
+    <script src="{{ asset('vendors/nprogress/nprogress.js') }}"></script>
+    {{-- <script src="{{ asset('js/gentelella.js') }}"></script> --}}
 </body>
 </html>
