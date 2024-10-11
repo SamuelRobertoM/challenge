@@ -10,14 +10,13 @@ Este proyecto consiste en un ABM (Alta, Baja, Modificación y Consulta) de produ
 - **Composer** >= 1.10
 - **Laravel** >= 8.x
 - **SQLite** (o cualquier base de datos soportada por Laravel)
-- **NPM** (Node Package Manager) y **Node.js** para la gestión de paquetes de frontend.
 
 ## Instalación
 
 ### 1. Clonar el repositorio
 
-git clone https://github.com/usuario/repo-proyecto.git
-cd repo-proyecto
+git clone git@github.com:SamuelRobertoM/challenge.git
+cd prueba_template
 
 ### 2. Instalar dependencias
     

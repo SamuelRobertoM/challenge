@@ -8,7 +8,6 @@
     </div>
     {{-- boton volver --}}
     <a href="{{ route('productos-servicios.index') }}" class="btn btn-primary">Volver</a>
-    {{-- hacer un show de productos/servicios --}}
     <div class="clearfix"></div>
     <div class="row">
         <div class="col-md-12 col-sm-12 ">

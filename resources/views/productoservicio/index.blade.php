@@ -103,6 +103,7 @@
                                     <td>{{ $producto_servicio->descripcion }}</td>
                                     <td>{{ $producto_servicio->precio_bruto_unitario }}</td>
                                     <td class="text-rigth">
+                                        {{-- Botón "Ver" --}}
                                         <a href="{{ route('producto-servicio.show', $producto_servicio->id) }}" class="btn btn-info btn-sm" data-toggle="tooltip" 
                                             title="Ver producto/servicio"><i class="fas fa-eye"></i>
                                         </a>

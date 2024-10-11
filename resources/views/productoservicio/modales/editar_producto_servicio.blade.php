@@ -14,7 +14,6 @@
           <div class="modal-body">
             <p>Editar un Producto/Servicio</p>
             <div class="form-group">
-                {{-- crear input con los campos de producto nombre, Descripcion, Precio unitario, acciones --}}
                 <label for="nombre">Nombre</label>
                 <input type="text" value="{{$producto_servicio->nombre}}" class="form-control" id="nombre" name="nombre" required>
                 <label for="descripcion">Descripción</label>
@@ -36,7 +35,7 @@
                 <div class="form-group">
                   <label for="rubro">Rubro</label>
                   <select name="id_rubro" id="rubro" class="form-control" required>
-                      <option value="" disabled>Selecciona un rubro</option> <!-- Opción por defecto -->
+                      <option value="" disabled>Selecciona un rubro</option> 
                       @foreach($rubros as $rubro)
                           <option value="{{ $rubro->id }}" {{ $producto_servicio->id_rubro == $rubro->id ? 'selected' : '' }}>
                               {{ $rubro->nombre }}
