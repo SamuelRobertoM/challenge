@@ -51,3 +51,11 @@ php artisan db:seed
 php artisan serve
 ```
 Accede al proyecto desde tu navegador en http://localhost:8000
+
+### 6.Acceder al sistema:
+
+```
+User: admin@example.com
+password: password
+```
+
