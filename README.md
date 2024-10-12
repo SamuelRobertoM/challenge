@@ -17,7 +17,7 @@ Este proyecto consiste en un ABM (Alta, Baja, Modificación y Consulta) de produ
 ```
 git clone git@github.com:SamuelRobertoM/challenge.git
 
-cd prueba_template
+cd challenge
 ```
 ### 2. Instalar dependencias
 ```
