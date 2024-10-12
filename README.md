@@ -6,7 +6,7 @@ Este proyecto consiste en un ABM (Alta, Baja, Modificación y Consulta) de produ
 
 ## Requisitos
 
-- **PHP** >= 7.3
+- **PHP** >= 8.2
 - **Composer** >= 1.10
 - **Laravel** >= 8.x
 - **SQLite** (o cualquier base de datos soportada por Laravel)
